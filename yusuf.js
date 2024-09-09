@@ -31,3 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
         recognition.start();
     });
 });
+
+
+// upload botton 
+const uploadBtn = document.querySelector('.upload-btn');
+const imgUpload = document.querySelector('.img-upload');
+
+uploadBtn.addEventListener('click', function() {
+    imgUpload.click(); 
+})
