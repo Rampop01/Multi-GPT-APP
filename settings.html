@@ -9,11 +9,11 @@
 </head>
 <body class="bg-black text-white h-screen grid items-center justify-center">
     <!-- settings container  -->
-    <div class="bg-gray-800 h-5/6 max-w-screen-md shadow-md shadow-gray-700 rounded-lg">
+    <div class="set-container bg-gray-800 h-5/6 max-w-screen-md shadow-md shadow-gray-700 rounded-lg">
         <!-- settings header  -->
         <header class="p-4 mb-2 flex items-baseline justify-between col-span-3">
             <h1>settings</h1>
-            <i class="fa fa-times" aria-hidden="true"></i>           
+            <button onclick="close()" class="cursor-pointer"><i class="fa fa-times" aria-hidden="true"></i></button>           
         </header>
         <!-- horizontal line -->
         <hr class="mb-4">
@@ -22,42 +22,42 @@
         <div class="flex gap-14">   
         <!-- settings content -->
          <div class="space-y-8">
-            <section class="flex items-center gap-2 cursor-pointer">
+            <section onclick="genBtn()" class="general flex items-center gap-2 cursor-pointer">
                 <i class="fa fa-cog" aria-hidden="true"></i>
                 <button class="outline-none border-none">
                     General
                 </button>
             </section>
 
-            <section class="flex items-center gap-2 cursor-pointer">
+            <section onclick="personBtn()" class="person flex items-center gap-2 cursor-pointer">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <button class="outline-none border-none">
                     Personalization
                 </button>
             </section>
 
-            <section class="flex items-center gap-2 cursor-pointer">
+            <section onclick="speechBtn()" class="speech flex items-center gap-2 cursor-pointer">
                 <i class="fa fa-podcast" aria-hidden="true"></i>
                 <button class="outline-none border-none">
                     Speech
                 </button>
             </section>
 
-            <section class="flex items-center gap-2 cursor-pointer">
+            <section onclick="dataBtn()" class="data flex items-center gap-2 cursor-pointer">
                 <i class="fa fa-database" aria-hidden="true"></i>
                 <button class="outline-none border-none">
                     Data control
                 </button>
             </section>
 
-            <section class="flex items-center gap-2 cursor-pointer">
+            <section onclick="buildBtn()" class="build flex items-center gap-2 cursor-pointer">
                 <i class="fa fa-users" aria-hidden="true"></i>
                 <button class="outline-none border-none">
                     Builder profile
                 </button>
             </section>
 
-            <section class="flex items-center gap-2 cursor-pointer">
+            <section onclick="secureBtn()" class="secure flex items-center gap-2 cursor-pointer">
                 <i class="fa fa-shield" aria-hidden="true"></i>
                 <button class="outline-none border-none">
                     Security
@@ -67,7 +67,7 @@
         </div>
          <!-- settings output sections -->
           <!-- for general  -->
-        <div class="flex flex-col col-span-3 gap-8">
+        <div class="gen-output flex flex-col col-span-3 gap-8">
             <section class="cursor-pointer flex justify-between">
                 <button class="outline-none border-none">
                     Theme
@@ -126,7 +126,7 @@
           </div>
 
           <!-- for Personalization  -->
-          <div class="flex flex-col col-span-3 gap-4 hidden">
+          <div class="person-output flex flex-col col-span-3 gap-4 hidden">
             <section class="cursor-pointer flex justify-between">
                 <button class="outline-none border-none">
                     custom instructions
@@ -174,7 +174,7 @@
           </div>
 
           <!-- speech  -->
-        <div class="flex flex-col col-span-3 gap-4 hidden">
+        <div class="speech-output flex flex-col col-span-3 gap-4 hidden">
             <section class="cursor-pointer flex justify-between">
                 <p>Voice</p>
                 <div class="flex gap-4">
@@ -189,7 +189,7 @@
         </div>
 
         <!-- Data control  -->
-        <div class="flex flex-col col-span-3 gap-4 hidden">
+        <div class="data-output flex flex-col col-span-3 gap-4 hidden">
             <section class="cursor-pointer flex justify-between">
                 <button class="outline-none border-none">
                     Improve the model for everyone
@@ -228,7 +228,7 @@
           </div>
           
           <!-- security  -->
-          <div class="flex flex-col col-span-3 gap-4 hidden">
+          <div class="secure-output flex flex-col col-span-3 gap-4 hidden">
             <section class="cursor-pointer flex justify-between items-center">
                 <div class="flex flex-col gap-2">
                     <h1>Multi-factor authentication</h1>
@@ -252,5 +252,7 @@
 
     </div>
     </div>
+
+    <script src="yusuf.js"></script>
 </body>
 </html>

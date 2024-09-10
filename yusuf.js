@@ -40,3 +40,90 @@ const imgUpload = document.querySelector('.img-upload');
 uploadBtn.addEventListener('click', function() {
     imgUpload.click(); 
 })
+
+
+
+// settings section 
+
+const personOutput = document.querySelector('.person-output');
+const speechOutput = document.querySelector('.speech-output');
+const dataOutput = document.querySelector('.data-output');
+const buildOutput = document.querySelector('.build-output');
+const secureOutput = document.querySelector('.secure-output');
+
+function genBtn(){
+    const genOutput = document.querySelector('.gen-output');
+    const personOutput = document.querySelector('.person-output');
+    const speechOutput = document.querySelector('.speech-output');
+    const dataOutput = document.querySelector('.data-output');
+    const secureOutput = document.querySelector('.secure-output');
+    secureOutput.style.display = 'none'
+    dataOutput.style.display = 'none'
+    personOutput.style.display = 'none';
+    speechOutput.style.display = 'none'
+    genOutput.style.display = 'flex'
+}
+
+function personBtn(){
+    const personOutput = document.querySelector('.person-output');
+    const genOutput = document.querySelector('.gen-output');
+    const dataOutput = document.querySelector('.data-output');
+    const secureOutput = document.querySelector('.secure-output');
+    const speechOutput = document.querySelector('.speech-output');
+     speechOutput.style.display = 'none'
+    secureOutput.style.display = 'none'
+    dataOutput.style.display = 'none'
+    genOutput.style.display = 'none';
+    personOutput.style.display = 'flex';
+}
+
+function speechBtn(){
+    const speechOutput = document.querySelector('.speech-output');
+    const personOutput = document.querySelector('.person-output');
+    const genOutput = document.querySelector('.gen-output');
+    const dataOutput = document.querySelector('.data-output');
+    const secureOutput = document.querySelector('.secure-output');
+    secureOutput.style.display = 'none'
+    dataOutput.style.display = 'none'
+    genOutput.style.display = 'none';
+    personOutput.style.display = 'none';
+    speechOutput.style.display = 'flex'
+}
+
+function dataBtn(){
+    const speechOutput = document.querySelector('.speech-output');
+    const personOutput = document.querySelector('.person-output');
+    const genOutput = document.querySelector('.gen-output');
+    const dataOutput = document.querySelector('.data-output');
+    const secureOutput = document.querySelector('.secure-output');
+    secureOutput.style.display = 'none'
+    dataOutput.style.display = 'flex'
+    genOutput.style.display = 'none';
+    personOutput.style.display = 'none';
+    speechOutput.style.display = 'none'
+}
+
+function secureBtn(){
+    const speechOutput = document.querySelector('.speech-output');
+    const personOutput = document.querySelector('.person-output');
+    const genOutput = document.querySelector('.gen-output');
+    const dataOutput = document.querySelector('.data-output');
+    const secureOutput = document.querySelector('.secure-output');
+    secureOutput.style.display = 'flex'
+    dataOutput.style.display = 'none'
+    genOutput.style.display = 'none';
+    personOutput.style.display = 'none';
+    speechOutput.style.display = 'none'
+}
+
+// close section 
+function close(){
+    const setContainer = document.querySelector('.set-container');
+    setContainer.style.display = 'none';
+}
+
+
+
+
+
+
