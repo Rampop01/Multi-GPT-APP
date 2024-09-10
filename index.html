@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <title>Document</title>
+    <title>Multi-GPT</title>
   </head>
   <body class="dark:bg-black dark:text-white bg-white text-black light-mode">
     <div class="grid grid-cols-5">
@@ -98,6 +98,7 @@
               />
             </svg>
           </div>
+
           <div class="flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,6 +114,12 @@
                 d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
               />
             </svg>
+
+            <button
+              class="w-40 bg-[#b1640b] text-white font-medium py-2 rounded-md hover:bg-yellow-950"
+            >
+              <a href="./Sign-in.html">Log out</a>
+            </button>
 
             <div class="rounded-full bg-gray-600 p-2">PO</div>
           </div>
@@ -312,7 +319,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 cursor-pointer"
+            class="size-6 cursor-pointer mic-btn cursor-pointer"
           >
             <path
               stroke-linecap="round"
@@ -320,13 +327,21 @@
               d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z"
             />
           </svg>
+
+          <!-- image upload button  -->
+          <input
+            class="img-upload hidden"
+            type="file"
+            id="imageUpload"
+            accept="image/*"
+          />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 cursor-pointer"
+            class="size-6 upload-btn cursor-pointer cursor-pointer"
           >
             <path
               stroke-linecap="round"
@@ -340,17 +355,18 @@
           >
             <textarea
               placeholder=" 💡 Message MultiGPT..."
-              class="p-2 w-full border border-[#b1640b] dark:bg-gray-800 bg-gray-200 dark:text-white h-12 rounded-2xl pr-12"
+              class="chat-box p-2 w-full border border-[#b1640b] dark:bg-gray-800 bg-gray-200 dark:text-white h-12 rounded-2xl pr-12"
               id="chat-input"
               required
             ></textarea>
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="absolute size-6 m-6 cursor-pointer send-icon"
+              class="absolute size-6 m-6 cursor-pointer send-icon cursor-pointer"
               id="send-btn"
             >
               <path
@@ -415,5 +431,6 @@
       </div>
     </div>
     <script src="rahmat.js" defer></script>
+    <script src="yusuf.js"></script>
   </body>
 </html>
