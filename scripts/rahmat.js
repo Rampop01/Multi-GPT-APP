@@ -11,7 +11,8 @@ const openBtn = document.getElementById("openSidebar");
 const userHistory = document.getElementById("userHistory");
 const newChat = document.querySelector(".new-chat");
 const chatDetails = document.querySelector(".chat-content");
-
+import { generateData } from "./bolaji.js";
+// const { generateData } = require("./bolaji.js");
 let userText = null;
 
 // Load data from local storage if available
@@ -29,19 +30,20 @@ const createElement = (html, className) => {
 };
 
 // Show the typing for user to know that the response is loading
-const showTypingAnimation = () => {
+const showTypingAnimation = async () => {
+  const result = await generateData(userText);
   const typingHtml = `<div class="m-8 typing">typing...</div>
   `;
   const incomingChatDiv = createElement(typingHtml, "incoming");
   chatContainer.appendChild(incomingChatDiv);
   setTimeout(() => {
     incomingChatDiv.remove();
-    getChatResponse();
+    getChatResponse(result);
   }, 2000);
 };
 
 // we are meant to use API here its not free,so here its manual response
-const getChatResponse = () => {
+const getChatResponse = (response) => {
   const responseHtml = `<div class="md:mx-24 mx-4 mt-8 flex gap-4 chat incoming mb-4">
             <img
               src="/images/output_new_rounded.ico"
@@ -53,8 +55,7 @@ const getChatResponse = () => {
                 <h1
                   class="dark:bg-gray-800 bg-gray-200 shadow-md shadow-gray-700 w-fit p-4"
                 >
-                  This is Multi-GPT response card, it will display the response
-                  to the question here
+                  ${response}
                 </h1>
               </div>
               <div class="flex mt-4 gap-4">
@@ -207,3 +208,5 @@ moonIcon.addEventListener("click", () => {
 //  Handle the sidebar use history -------------------------------------------------------
 
 const handleHistory = () => {};
+
+//
