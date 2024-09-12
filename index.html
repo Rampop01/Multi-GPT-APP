@@ -12,14 +12,14 @@
       <div
         class="border-r-2 border-[#b1640b] h-screen bg-gray-200 dark:bg-black sidebar"
       >
-        <div class="flex justify-between m-4">
+        <div class="flex justify-between md:m-4 m-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 tooltip"
+            class="md:w-6 md:h-6 w-4 h-4 tooltip"
             title="Close Sidebar"
             id="closeSidebar"
           >
@@ -36,7 +36,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="md:w-6 md:h-6 w-4 h-4"
           >
             <path
               stroke-linecap="round"
@@ -46,23 +46,23 @@
           </svg>
         </div>
 
-        <div class="flex gap-4 mx-4 mt-6">
+        <div class="flex md:gap-4 gap-2 md:mx-4 mx-2 md:mt-6 mt-4">
           <img
             src="/images/output.ico"
             alt=""
-            class="rounded-full border-[#b1640b] border-2 w-6 h-6"
+            class="rounded-full border-[#b1640b] border-2 md:w-6 md:h-6 w-4 h-4"
           />
-          <h1>Multi-GPT</h1>
+          <h1 class="md:text-xl text-sm">Multi-GPT</h1>
         </div>
 
-        <div class="flex gap-4 mx-4 mt-6">
+        <div class="flex md:gap-4 md:mx-4 mt-6 items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="md:w-6 md:h-6 w-4 h-4"
           >
             <path
               stroke-linecap="round"
@@ -71,7 +71,7 @@
             />
           </svg>
 
-          <h1>Explore GPTs</h1>
+          <h1 class="md:text-xl text-sm">Explore GPTs</h1>
         </div>
         <div class="m-4 mt-12">
           <div>Previous 7days</div>
@@ -99,14 +99,14 @@
       <div class="col-span-4 flex flex-col relative">
         <div class="flex m-4 justify-between items-center">
           <div class="flex gap-2 items-center">
-            <h1 class="font-semibold text-2xl">MultiGPT</h1>
+            <h1 class="font-semibold md:text-2xl text-xl">MultiGPT</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="size-5"
+              class="md:w-6 md:h-6 w-4 h-4"
             >
               <path
                 stroke-linecap="round"
@@ -123,39 +123,35 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="size-6"
+              class="md:w-6 md:h-6 w-4 h-4"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
               />
-            </svg>          
-            <div class="rounded-full bg-gray-600 p-2"><button class="manage-profile">PO</button></div>
+            </svg>
+            <div class="rounded-full bg-gray-600 md:p-2 p-1">
+              <button class="manage-profile">PO</button>
+            </div>
           </div>
         </div>
 
         <!-- dropdown menu -->
-        <div class="hidden dropdown-menu bg-gray-800 w-60 rounded-md flex items-baseline flex-col border border-[#b1640b] absolute right-0 top-20">
-          <div 
-            class="py-3 px-5 inline-flex items-center">
-            <img 
-              src="./images/settings.svg" 
-              alt="" 
-              class="mr-3">
+        <div
+          class="hidden dropdown-menu bg-gray-800 md:w-60 w-40 rounded-md flex items-baseline flex-col border border-[#b1640b] absolute right-0 top-20 text-white mr-2"
+        >
+          <div class="py-3 px-5 inline-flex items-center">
+            <img src="./images/settings.svg" alt="" class="mr-3" />
             <a href="./settings.html">Settings</a>
           </div>
-          
-          <hr class="w-full border-[#b1640b]">
 
-          <div 
-            class="py-3 px-5 inline-flex items-center">           
-            <img 
-              src="./images/logout-svgrepo-com.svg" 
-              alt=""
-              class="mr-3">
+          <hr class="w-full border-[#b1640b]" />
+
+          <div class="py-3 px-5 inline-flex items-center">
+            <img src="./images/logout-svgrepo-com.svg" alt="" class="mr-3" />
             <a href="./Sign-in.html">Log out</a>
-          </div>          
+          </div>
         </div>
 
         <!-- the center logo and new login UI -->
@@ -345,7 +341,7 @@
 
         <!-- input field  area with the icons-->
 
-        <div class="p-4 mt-auto flex items-center gap-4">
+        <div class="md:p-4 p-2 mt-auto flex items-center md:gap-4 gap-1">
           <!-- mic svg -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -389,7 +385,7 @@
           >
             <textarea
               placeholder=" 💡 Message MultiGPT..."
-              class="chat-box p-2 md:w-full border border-[#b1640b] dark:bg-gray-800 bg-gray-200 dark:text-white h-12 rounded-2xl pr-12"
+              class="chat-box p-2 md:w-full border border-[#b1640b] dark:bg-gray-800 bg-gray-200 dark:text-white md:h-12 h-8 rounded-2xl md:px-12 px-8"
               id="chat-input"
               required
             ></textarea>
@@ -400,7 +396,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="absolute size-6 m-6 cursor-pointer send-icon cursor-pointer"
+              class="absolute w-4 h-4 md:w-4 md:h-4 m-6 cursor-pointer send-icon cursor-pointer"
               id="send-btn"
             >
               <path
@@ -435,7 +431,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6 cursor-pointer"
+              class="md:w-6 md:h-6 w-4 h-4 cursor-pointer"
             >
               <path
                 stroke-linecap="round"
@@ -452,7 +448,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6 cursor-pointer hidden"
+              class="md:w-6 md:h-6 w-4 h-4 cursor-pointer hidden"
             >
               <path
                 stroke-linecap="round"
@@ -464,8 +460,8 @@
         </div>
       </div>
     </div>
-    <script src="rahmat.js" defer></script>
-    <script src="yusuf.js"></script>
+    <script src="/scripts/rahmat.js"></script>
+    <script src="/scripts/yusuf.js"></script>
     <script src="./scripts/stephen.js"></script>
   </body>
 </html>
