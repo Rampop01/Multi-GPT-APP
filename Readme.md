@@ -1,4 +1,5 @@
 Overview
+![Alt text](images/Multi-gpt.png)
 This is a chat-gpt clone that contains the features of a typical chatbot, enabling users to get human-like interective responses to questions and simple conversations.
 
 Features
