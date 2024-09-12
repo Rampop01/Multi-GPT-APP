@@ -7,10 +7,10 @@
 
     <title>Multi-GPT</title>
   </head>
-  <body class="dark:bg-black dark:text-white bg-white text-black light-mode">
+  <body class="dark:bg-black dark:text-white bg-white text-black">
     <div class="grid grid-cols-5">
       <div
-        class="border-r-2 border-[#b1640b] h-screen bg-gray-200 dark:bg-black"
+        class="border-r-2 border-[#b1640b] h-screen bg-gray-200 dark:bg-black sidebar"
       >
         <div class="flex justify-between m-4">
           <svg
@@ -21,6 +21,7 @@
             stroke="currentColor"
             class="w-6 h-6 tooltip"
             title="Close Sidebar"
+            id="closeSidebar"
           >
             <path
               stroke-linecap="round"
@@ -28,6 +29,7 @@
               d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
             />
           </svg>
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -71,12 +73,28 @@
 
           <h1>Explore GPTs</h1>
         </div>
-        <div class="m-4 mt-12 hidden">
+        <div class="m-4 mt-12 hidden userHistory">
           <div>Previous 7days</div>
           <div>Previous 30days</div>
           <div>Months</div>
         </div>
       </div>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6 ml-12 h-screen hidden overflow-y-hidden"
+        id="openSidebar"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 21.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H3.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+        />
+      </svg>
 
       <!-- content with input -->
       <div class="col-span-4 flex flex-col relative">
@@ -321,7 +339,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 cursor-pointer mic-btn cursor-pointer"
+            class="size-6 cursor-pointer mic-btn"
           >
             <path
               stroke-linecap="round"
@@ -343,7 +361,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 upload-btn cursor-pointer cursor-pointer"
+            class="size-6 upload-btn cursor-pointer"
           >
             <path
               stroke-linecap="round"
