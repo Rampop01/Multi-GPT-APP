@@ -79,7 +79,7 @@
       </div>
 
       <!-- content with input -->
-      <div class="col-span-4 flex flex-col">
+      <div class="col-span-4 flex flex-col relative">
         <div class="flex m-4 justify-between items-center">
           <div class="flex gap-2 items-center">
             <h1 class="font-semibold text-2xl">MultiGPT</h1>
@@ -113,17 +113,19 @@
                 stroke-linejoin="round"
                 d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
               />
-            </svg>
-
-            <button
-              class="w-40 bg-[#b1640b] text-white font-medium py-2 rounded-md hover:bg-yellow-950"
-            >
-              <a href="./Sign-in.html">Log out</a>
-            </button>
-
-            <div class="rounded-full bg-gray-600 p-2">PO</div>
+            </svg>          
+            <div class="rounded-full bg-gray-600 p-2"><button class="manage-profile">PO</button></div>
           </div>
         </div>
+
+        <!-- dropdown menu -->
+        <div class="hidden dropdown-menu w-60 py-2 rounded-md flex items-baseline flex-col border border-[#b1640b] px-8 absolute right-0 top-20">
+          
+          <a href="./settings.html">Settings</a>
+          <hr class="w-full border-gray-100">
+          <a href="./Sign-in.html">Log out</a>
+        </div>
+
         <!-- the center logo and new login UI -->
         <div
           class="flex flex-col items-center justify-center flex-grow hidden new-chat"
@@ -432,5 +434,6 @@
     </div>
     <script src="rahmat.js" defer></script>
     <script src="yusuf.js"></script>
+    <script src="./stephen.js"></script>
   </body>
 </html>
