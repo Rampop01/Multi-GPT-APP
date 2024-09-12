@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// upload botton 
+// upload button 
 const uploadBtn = document.querySelector('.upload-btn');
 const imgUpload = document.querySelector('.img-upload');
 
@@ -70,7 +70,7 @@ function personBtn(){
     const dataOutput = document.querySelector('.data-output');
     const secureOutput = document.querySelector('.secure-output');
     const speechOutput = document.querySelector('.speech-output');
-     speechOutput.style.display = 'none'
+    speechOutput.style.display = 'none'
     secureOutput.style.display = 'none'
     dataOutput.style.display = 'none'
     genOutput.style.display = 'none';
@@ -115,13 +115,6 @@ function secureBtn(){
     personOutput.style.display = 'none';
     speechOutput.style.display = 'none'
 }
-
-// close section 
-function close(){
-    const setContainer = document.querySelector('.set-container');
-    setContainer.style.display = 'none';
-}
-
 
 
 
