@@ -100,3 +100,4 @@ moonIcon.addEventListener("click", () => {
 //  handle the sidebar use history-------------------------------------------------------
 
 const handleHistory = () => {};
+// addd time stamp
