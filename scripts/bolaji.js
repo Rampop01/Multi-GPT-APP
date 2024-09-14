@@ -1,25 +1,19 @@
-// const getChatResponse = async () => {
-//   const API_URL = "";
+import dotenv from "dotenv";
 
-//   // const requestOptions = {
-//   //   method: "POST",
-//   //   headers: {
-//   //     "Content-Type": "application/json",
-//   //     Authorization: `Bearer ${}`,
-//   //   },
-//   //   body: JSON.stringify({
-//   //     model: "gpt-3.5-turbo-instruct",
-//   //     prompt: userText,
-//   //     max_tokens: 7,
-//   //     temperature: 0,
-//   //     n: 1,
-//   //     stop: null,
-//   //   }),
-//   // };
-//   try {
-//     const response = await (await fetch(API_URL, requestOptions)).json();
-//     console.log(response);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+dotenv.config();
+
+// Make sure to include these imports:
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+module.exports = {
+  async generateData(prompt) {
+    const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+    // const prompt = "Write a story about a magic backpack.";
+
+    const result = await model.generateContent(prompt);
+    console.log(result.response.text());
+    return result.response.text();
+  },
+};

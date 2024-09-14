@@ -11,9 +11,12 @@
     <!-- settings container  -->
     <div class="set-container bg-gray-800 h-5/6 max-w-screen-md shadow-md shadow-gray-700 rounded-lg">
         <!-- settings header  -->
-        <header class="p-4 mb-2 flex items-baseline justify-between col-span-3">
+        <header class="p-4 mb-2 flex items-baseline justify-between col-span-3 cursor-pointer">
             <h1>settings</h1>
-            <a href="./index.html"><button class="cursor-pointer"><i class="fa fa-times" aria-hidden="true"></i></button></a>           
+            <div class="relative group">
+                <a href="./index.html"><button class="cursor-pointer"><i class="fa fa-times" aria-hidden="true"></i></button></a>
+                <span class="absolute bottom-full right-0 transform translate-y-1 mb-2 hidden group-hover:block bg-gray-700 text-white text-xs font-medium px-2 py-1 rounded-md">Close</span>          
+            </div>
         </header>
         <!-- horizontal line -->
         <hr class="mb-4">
@@ -23,43 +26,61 @@
         <!-- settings content -->
          <div class="md:space-y-8 space-x-2 md:space-x-0 flex w-fit md:grid">
             <section onclick="genBtn()" class="general flex items-center gap-2 cursor-pointer">
+               <div class="relative group">
                 <i class="fa fa-cog" aria-hidden="true"></i>
                 <button class="outline-none border-none">
+                    <span class="absolute bottom-full right-0 transform translate-y-1 mb-2 hidden group-hover:block bg-gray-700 text-white text-xs font-medium px-2 py-1 rounded-md">General</span>
+               </div>
                     General
                 </button>
             </section>
 
             <section onclick="personBtn()" class="person flex items-center gap-2 cursor-pointer">
+               <div class="relative group">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <button class="outline-none border-none">
+                    <span class="absolute bottom-full right-0 transform translate-y-1 mb-2 hidden group-hover:block bg-gray-700 text-white text-xs font-medium px-2 py-1 rounded-md">Personalization</span>
+               </div>
                     Personalization
                 </button>
             </section>
 
             <section onclick="speechBtn()" class="speech flex items-center gap-2 cursor-pointer">
-                <i class="fa fa-podcast" aria-hidden="true"></i>
+                <div class="relative group">
+                    <i class="fa fa-podcast" aria-hidden="true"></i>
                 <button class="outline-none border-none">
+                    <span class="absolute bottom-full right-0 transform translate-y-1 mb-2 hidden group-hover:block bg-gray-700 text-white text-xs font-medium px-2 py-1 rounded-md">Speech</span>
+                </div>
                     Speech
                 </button>
             </section>
 
             <section onclick="dataBtn()" class="data flex items-center gap-2 cursor-pointer">
+               <div class="relative group">
                 <i class="fa fa-database" aria-hidden="true"></i>
                 <button class="outline-none border-none">
+                    <span class="absolute bottom-full right-0 transform translate-y-1 mb-2 hidden group-hover:block bg-gray-700 text-white text-xs font-medium px-2 py-1 rounded-md">Data</span>
+               </div>
                     Data control
                 </button>
             </section>
 
             <section onclick="buildBtn()" class="build flex items-center gap-2 cursor-pointer">
-                <i class="fa fa-users" aria-hidden="true"></i>
+                <div class="relative group">
+                    <i class="fa fa-users" aria-hidden="true"></i>
                 <button class="outline-none border-none">
+                    <span class="absolute bottom-full right-0 transform translate-y-1 mb-2 hidden group-hover:block bg-gray-700 text-white text-xs font-medium px-2 py-1 rounded-md">profile</span>
+                </div>
                     Builder profile
                 </button>
             </section>
 
             <section onclick="secureBtn()" class="secure flex items-center gap-2 cursor-pointer">
-                <i class="fa fa-shield" aria-hidden="true"></i>
+                <div class="relative group">
+                    <i class="fa fa-shield" aria-hidden="true"></i>
                 <button class="outline-none border-none">
+                    <span class="absolute bottom-full right-0 transform translate-y-1 mb-2 hidden group-hover:block bg-gray-700 text-white text-xs font-medium px-2 py-1 rounded-md">Security</span>
+                </div>
                     Security
                 </button>
             </section>          
